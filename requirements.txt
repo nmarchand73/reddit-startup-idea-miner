@@ -1,0 +1,6 @@
+praw
+pandas
+requests
+numpy
+pathlib2
+ollama 
