@@ -2,7 +2,7 @@
 
 A comprehensive tool for mining startup ideas from Reddit using advanced AI analysis. This tool implements Marshall Hargrave's 2026 methodology for discovering $100k+ startup opportunities.
 
-## Features
+## 🚀 Features
 
 - **Reddit API Integration**: Scrapes 7 goldmine subreddits for startup ideas
 - **AI-Powered Analysis**: Uses Ollama for intelligent idea evaluation
@@ -11,13 +11,14 @@ A comprehensive tool for mining startup ideas from Reddit using advanced AI anal
 - **Monetization Classification**: Categorizes business models
 - **Output Organization**: All results saved to `output/` directory
 - **Modular Architecture**: Clean separation of concerns
+- **Comprehensive Testing**: 20 passing tests for all scoring formulas
 
-## Installation
+## 📦 Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd REDDIT_SCRAPER
+   git clone https://github.com/nmarchand73/reddit-startup-idea-miner.git
+   cd reddit-startup-idea-miner
    ```
 
 2. **Install dependencies**
@@ -44,7 +45,7 @@ A comprehensive tool for mining startup ideas from Reddit using advanced AI anal
    # or other models like phi4-mini, deepseek-r1
    ```
 
-## Usage
+## 🎯 Usage
 
 ### Basic Usage
 
@@ -69,7 +70,7 @@ python main.py --no-scrape
 - `--max-ideas <number>`: Limit number of ideas to analyze (default: 10)
 - `--no-scrape`: Skip scraping, analyze most recent output files
 
-## Output Structure
+## 📊 Output Structure
 
 All results are saved to the `output/` directory:
 
@@ -80,7 +81,7 @@ output/
 └── ollama_analysis_YYYYMMDD_HHMMSS.json  # AI analysis results
 ```
 
-## Ollama Analysis Features
+## 🤖 Ollama Analysis Features
 
 The AI analysis provides:
 
@@ -91,7 +92,30 @@ The AI analysis provides:
 - **Strategic Recommendations**: Actionable next steps and insights
 - **Recommendation Distribution**: Pursue Aggressively/Cautiously/Validate Further/Pass
 
-## Configuration
+## 🧪 Testing
+
+The project includes a comprehensive test suite with 20 passing tests:
+
+```bash
+# Run all tests
+python test/run_tests.py
+
+# Run specific test
+python test/run_tests.py test_engagement_velocity_formula
+
+# Run individual test file
+python -m unittest test.test_scoring_formulas -v
+```
+
+### Test Coverage
+- ✅ **Engagement Velocity Formula**: 4 test cases
+- ✅ **Pain Score Formula**: 5 test cases  
+- ✅ **Endorsement Scoring**: 4 test cases
+- ✅ **Monetization Classification**: 4 test cases
+- ✅ **Fallback Analysis Scoring**: 3 test cases
+- ✅ **Integration Tests**: Complete pipeline testing
+
+## ⚙️ Configuration
 
 ### Reddit API Credentials
 
@@ -106,7 +130,7 @@ USER_AGENT = "YourApp/1.0 by YourUsername"
 
 The system automatically detects available models and falls back gracefully if the specified model isn't available.
 
-## Architecture
+## 🏗️ Architecture
 
 - **`main.py`**: Entry point and command-line interface
 - **`constants.py`**: Configuration and constants
@@ -114,8 +138,9 @@ The system automatically detects available models and falls back gracefully if t
 - **`reddit_idea_miner.py`**: RedditIdeaMiner class for scraping
 - **`ollama_analyzer.py`**: OllamaAnalyzer class for AI analysis
 - **`utils.py`**: Utility functions for file operations
+- **`test/`**: Comprehensive test suite
 
-## Methodology
+## 📈 Methodology
 
 This tool implements the 2026 startup idea mining methodology:
 
@@ -125,7 +150,7 @@ This tool implements the 2026 startup idea mining methodology:
 4. **Monetization Mapping**: Micro SaaS, UGC Marketplace, Done-for-You classification
 5. **Validation System**: Idea funnel validation with multiple signals
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Ollama Issues
 - Ensure Ollama service is running: `ollama serve`
@@ -142,6 +167,31 @@ This tool implements the 2026 startup idea mining methodology:
 - All files are saved with timestamps for easy tracking
 - Check the directory for analysis results after running
 
-## License
+### Test Issues
+- Run tests to verify formulas: `python test/run_tests.py`
+- Check test documentation: `test/README.md`
+- All 20 tests should pass for production use
 
-This project is for educational and research purposes. 
+## 📚 Documentation
+
+- **Main README**: This file
+- **Test Documentation**: `test/README.md`
+- **GitHub Repository**: https://github.com/nmarchand73/reddit-startup-idea-miner
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `python test/run_tests.py`
+5. Submit a pull request
+
+## 📄 License
+
+This project is for educational and research purposes.
+
+---
+
+**Repository**: https://github.com/nmarchand73/reddit-startup-idea-miner  
+**Status**: ✅ All tests passing (20/20)  
+**Last Updated**: 2025-08-04 
